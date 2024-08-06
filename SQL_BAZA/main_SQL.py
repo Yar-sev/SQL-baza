@@ -53,12 +53,12 @@ def datafr():
     con.commit()
     con.close()
     return data
-def user_database(id):
+def user_database(id, name_user):
     data = datafr()
     for i in range(len(data)):
         if data[i][1] == id:
             return True
-    insert_data(id)
+    insert_data(id,name_user)
     return False
 def user(id):
     data = datafr()
